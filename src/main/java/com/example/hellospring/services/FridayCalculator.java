@@ -9,11 +9,11 @@ import java.time.LocalDate;
 @RestController
 public class FridayCalculator {
 
+    //1.3 Exercise: ErDetFredag?
     @GetMapping("/erdetfredag")
     public String isItFriday (){
-
         LocalDate date = LocalDate.now();
-        DayOfWeek dayOfWeek = date.getDayOfWeek();
+        DayOfWeek dayOfWeek = date.getDayOfWeek();      //Finder dags dato
 
         if (dayOfWeek.equals("FRIDAY")){
             return "Yes - It's Friday";
